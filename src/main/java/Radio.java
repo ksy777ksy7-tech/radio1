@@ -32,28 +32,3 @@ public class Radio {
             currentStation--;
         }
     }
-
-    // --- Громкость ---
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public void setCurrentVolume(int newVolume) {
-        if (newVolume >= 0 && newVolume <= 100) {
-            currentVolume = newVolume;
-        }
-    }
-
-    public void increaseVolume() {
-        if (currentVolume < 100) {
-            currentVolume++;
-        }
-    }
-
-    public void decreaseVolume() {
-        if (currentVolume > 0) {
-            currentVolume--;
-        }
-    }
-}
