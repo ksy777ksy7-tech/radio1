@@ -97,5 +97,23 @@ class RadioTest {
         radio.decreaseVolume();
 
         assertEquals(0, radio.getCurrentVolume());
+    }  @Test
+    void shouldDecreaseVolume() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(50);
+
+        radio.decreaseVolume();
+
+        assertEquals(49, radio.getCurrentVolume());
+    }
+
+    @Test
+    void shouldNotDecreaseBelowZero() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(0);
+
+        radio.decreaseVolume();
+
+        assertEquals(0, radio.getCurrentVolume());
     }
 }
